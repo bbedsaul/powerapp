@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-title>{{ filename }}</ion-title>
+  </ion-item>
+  <pdf-viewer [src]="fileUrl"
+              [show-all]="true"
+              [original-size]="false"
+              style="display:block;">
+
+  </pdf-viewer>
+
+</ion-content>

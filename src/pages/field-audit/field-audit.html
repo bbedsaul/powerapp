@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-title>Field Audit</ion-title>
+  </ion-item>
+  <button
+      ion-button
+      type="button"
+      block
+      (click)="gotoAddFieldAudit()">
+    Add Field Audit
+  </button>
+  <ion-list>
+    <div (click)='gotoFieldAuditDetails($event, folder.name)' *ngFor="let folder of folders">
+      <ion-item *ngIf="folder['.tag'] == 'file'">
+        <button
+            clear
+            type="button">
+          {{folder.name}}
+        </button>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

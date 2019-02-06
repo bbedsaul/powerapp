@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-title>Company Admin Page</ion-title>
+  </ion-item>
+  <button
+      ion-button
+      type="button"
+      block
+      (click)="gotoAddCompany(event,'New')">
+    Add Company
+  </button>
+  <ion-list>
+    <button
+        ion-item
+        *ngFor="let company of companies | async; let i = index"
+        (click)="gotoAddCompany(event, 'Edit', company, i)">
+      <h2>{{ company.name }} - {{ company.companyname }}</h2>
+    </button>
+  </ion-list>
+</ion-content>

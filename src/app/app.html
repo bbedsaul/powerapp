@@ -1,0 +1,96 @@
+<ion-menu [content]="nav">
+  <ion-header class="header">
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button
+        ion-item
+        icon-left
+        (click)="onLoad(eewpPage)"
+        *ngIf="isAuthenticated">
+        <ion-icon name="work-permit"></ion-icon>
+        <span class="icon-lable-text">Energized Electrical Work Permit</span>
+      </button>
+      <button
+          ion-item
+          (click)="onLoad(riskPage)"
+          *ngIf="isAuthenticated">
+        <ion-icon name="risk-assessment"></ion-icon>
+        <span class="icon-lable-text">Electrical Energy Risk Assessment</span>
+      </button>
+      <button
+          ion-item
+          icon-left
+          (click)="onLoad(fieldAuditPage)"
+          *ngIf="isAuthenticated">
+        <ion-icon name="field-audit"></ion-icon>
+        <span class="icon-lable-text">Field Audit</span>
+      </button>
+      <button
+          ion-item
+          icon-left
+          (click)="onLoad(updateLinePage)"
+          *ngIf="isAuthenticated">
+        <ion-icon large name="line-drawing"></ion-icon>
+        <span class="icon-lable-text">Update 1 Lines</span>
+      </button>
+      <button
+        ion-item
+        icon-left
+        (click)="onLoad(companyPage)"
+        *ngIf="isAdminUser">
+        <ion-icon name="admin-support-icon"></ion-icon>
+        <span class="icon-lable-text">Company Admin</span>
+    </button>
+      <button
+          ion-item
+          icon-left
+          (click)="onLoad(userPage)"
+          *ngIf="isAdminUser">
+        <ion-icon name="admin-icon"></ion-icon>
+        <span class="icon-lable-text">User Admin</span>
+      </button>
+      <button
+        ion-item
+        icon-left
+        (click)="onLoad(signinPage)"
+        *ngIf="!isAuthenticated">
+        <ion-icon name="login"></ion-icon>
+        <span class="icon-lable-text">Signin</span>
+      </button>
+      <button
+          ion-item
+          icon-left
+          (click)="onLoad(helpdeskPage)"
+          *ngIf="isAuthenticated">
+        <ion-icon name="help-desk"></ion-icon>
+        <span class="icon-lable-text">Help Desk</span>
+      </button>
+      <button
+        ion-item
+        icon-left
+        (click)="gotoSignup()"
+        *ngIf="!isAuthenticated">
+        <ion-icon name="signup"></ion-icon>
+        <span class="icon-lable-text">Signup</span>
+      </button>
+      <button
+        ion-item
+        icon-left
+        (click)="onLogout()"
+        *ngIf="isAuthenticated">
+        <ion-icon name="logout"></ion-icon>
+        <span class="icon-lable-text">Logout</span>
+      </button>
+
+    </ion-list>
+  </ion-content>
+  <ion-footer>Copyright Safety Adherence - All rights reserved.
+
+  </ion-footer>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #nav></ion-nav>

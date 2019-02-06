@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-title>{{ mode }} Company</ion-title>
+  </ion-item>
+  <form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item [hidden]="isEditMode()">
+        <ion-label floating>Name</ion-label>
+        <ion-input
+            autofocu
+            type="text"
+            formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Company Name</ion-label>
+        <ion-input
+            type="text"
+            formControlName="companyname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Description</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Energized Electrical Work Permit Form Url</ion-label>
+        <ion-input
+            type="text"
+            formControlName="eewpUrl"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Electrical Risk Assessment Form Url</ion-label>
+        <ion-input
+            type="text"
+            formControlName="eraUrl"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Field Audit Form Url</ion-label>
+        <ion-input
+            type="text"
+            formControlName="auditUrl"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Update 1 Lines Form Url</ion-label>
+        <ion-input
+            type="text"
+            formControlName="updateUrl"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button
+        type="submit"
+        ion-button
+        block
+        [disabled]="!companyForm.valid">{{ mode }} Company</button>
+  </form>
+</ion-content>

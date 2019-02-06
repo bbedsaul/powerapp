@@ -1,0 +1,15 @@
+page-field-audit-add {
+  html, body {
+    background: transparent !important;
+    color: transparent !important;
+    background-color: transparent !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-backface-visibility: visible;
+  }
+  .toolbar-background-md {
+    background: url("../../assets/images/safety-adherence-logo.png") center center no-repeat;
+  }
+}

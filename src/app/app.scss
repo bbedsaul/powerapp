@@ -1,0 +1,180 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+//html, body {
+//  background: transparent !important;
+//  color: transparent !important;
+//  background-color: transparent !important;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  -webkit-backface-visibility: visible;
+//  overflow: auto;
+//  -webkit-overflow-scrolling: touch;
+//  overflow: hidden;
+// }
+
+.menu-inner {
+  width: 330px;
+}
+
+.tabs-md .tab-button-text {
+  font-size: 1.7rem;
+}
+
+.iframe-style {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+.iframe-style-2 {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.button-inner ion-icon.adjust-top {
+  position: relative;
+  top: -1px;
+}
+
+.icon-lable-text{
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 35px;
+  padding-left: 5px;
+}
+
+.ion-ios-line-drawing,
+.ion-md-line-drawing {
+  content: url(../../assets/images/1-line-drawing.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+.ion-ios-help-desk,
+.ion-md-help-desk {
+  content: url(../../assets/images/help-desk.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+.ion-ios-risk-assessment,
+.ion-md-risk-assessment {
+  display: inline-block;
+  content: url(../../assets/images/electrical-risk-assessment.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+.ion-ios-work-permit,
+.ion-md-work-permit {
+  display: inline-block;
+  content: url(../../assets/images/energized-electrical-work-permit.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+.ion-ios-field-audit,
+.ion-md-field-audit {
+  content: url(../../assets/images/field-audit-form.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+
+.ion-ios-login,
+.ion-md-login {
+  content: url(../../assets/images/login.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+
+.ion-ios-signup,
+.ion-md-signup {
+  content: url(../../assets/images/signup.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+
+.ion-ios-logout,
+.ion-md-logout {
+  content: url(../../assets/images/logout.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+.ion-ios-admin-icon,
+.ion-md-admin-icon{
+  content: url(../../assets/images/admin-icon.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+.ion-ios-admin-support-icon,
+.ion-md-admin-support-icon {
+  content: url(../../assets/images/admin-support-icon.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+.ion-ios-admin-support-icon2,
+.ion-md-admin-support-icon2 {
+  content: url(../../assets/images/admin-support-icon2.svg);
+  width: 48px;
+  height: 64px;
+  padding: 0px 0px 0px 0px;
+  opacity: 0.9;
+}
+
+.footer {
+  color: #8c8c8c;
+  font-size: 12px;
+  text-align: center;
+}
+
+ion-label.label {
+  color: #000;
+}
+

@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-buttons start>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-buttons>
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-title>{{ mode }} User</ion-title>
+  </ion-item>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item [hidden]="isEditMode()">
+        <ion-label floating>User Name</ion-label>
+        <ion-input
+            type="text"
+            formControlName="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input
+            type="text"
+            formControlName="firstname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input
+            type="text"
+            formControlName="lastname"></ion-input>
+      </ion-item>
+      <ion-item [hidden]="isEditMode()">
+        <ion-label floating>Email Address</ion-label>
+        <ion-input
+            type="text"
+            formControlName="emailaddress"></ion-input>
+      </ion-item>
+      <ion-item [hidden]="isEditMode()" >
+        <ion-label fixed>Password</ion-label>
+        <ion-input
+            type="password"
+            formControlName="password"
+            [minlength]="8"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Company</ion-label>
+        <ion-select formControlName="companyname">
+          <ion-option
+              *ngFor="let companySel of selectCompany | async"
+              [value]="companySel.name">{{ companySel.companyname }}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>User or Admin</ion-label>
+        <ion-select formControlName="adminuser">
+          <ion-option
+              *ngFor="let adminuser of userTypes; let t = index;"
+              [value]="adminuser">{{ adminuser }}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <button
+        type="submit"
+        ion-button
+        block
+        [disabled]="!userForm.valid">{{ mode }} User</button>
+  </form>
+</ion-content>

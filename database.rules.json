@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "companies": {
+      ".read": "auth != null",
+      ".write": "root.child('registeredUsers').child(auth.uid).child('adminuser').val() == 'Admin'"
+    },
+    "registeredUsers": {
+      ".read": "auth != null",
+      ".write": "root.child('registeredUsers').child(auth.uid).child('adminuser').val() == 'Admin'"
+    }
+  }
+}
